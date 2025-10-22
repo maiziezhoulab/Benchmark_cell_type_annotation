@@ -7,6 +7,13 @@ is a conditional generative model for spatial transcriptomics that captures **su
 - Stratifies cells into discrete cell types while modeling continuous sub-cell-type variation.  
 - Scales to very large datasets (>1 million cells).  
 
+### Limitations
+-   Effectively requires a GPU for fast inference.
+
+```{topic} Tutorial:
+
+-   {doc}`/tutorials/notebooks/spatial/DestVI_tutorial`
+```
 ---
 
 ## Preliminaries
