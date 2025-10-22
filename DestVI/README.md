@@ -20,11 +20,11 @@ is a conditional generative model for spatial transcriptomics that captures **su
 proportions = st_model.get_proportions()
 st_adata.obsm["proportions"] = proportions
 ```
-
 Normalize to get spot-wise cell type fractions:
-\[
-\text{Proportion}_{sc} = \frac{\beta_{sc}}{\sum_c \beta_{sc}}
-\]
+
+$$
+\mathrm{Proportion}_{sc} = \frac{\beta_{sc}}{\sum_c \beta_{sc}}
+$$
 
 Plot:
 ```python
