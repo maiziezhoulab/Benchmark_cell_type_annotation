@@ -217,8 +217,6 @@ plot_bank <- plotColData(se,
 plot_grid(plot_nsp + coord_equal(), plot_bank + coord_equal(), ncol = 2)
 ```
 
-<img src="man/figures/README-unnamed-chunk-13-1.png" width="100%" />
-
 For clarity, we can visualise each of the clusters separately:
 
 ``` r
@@ -228,8 +226,6 @@ plot_grid(
     ncol = 2
 )
 ```
-
-<img src="man/figures/README-unnamed-chunk-14-1.png" width="100%" />
 
 Visualize UMAPs of the non-spatial and BANKSY embedding:
 
@@ -251,7 +247,6 @@ plot_grid(
 )
 ```
 
-<img src="man/figures/README-unnamed-chunk-15-1.png" width="100%" />
 
 <details>
 <summary>
