@@ -9,7 +9,7 @@ This is the official codebase for **scGPT: Towards Building a Foundation Model f
 ![Webapp](https://img.shields.io/website?url=https%3A%2F%2Fscgpthub.org&up_color=chartreuse%20&logo=gotomeeting&logoColor=%23FFB3FF&label=WebApp&labelColor=%2300CBFF) &nbsp;
 [![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/username/repo/blob/main/LICENSE)
 
-**!UPDATE**: We have released several new pretrained scGPT checkpoints. Please see the [Pretrained scGPT checkpoints](#pretrained-scGPT-checkpoints) section for more details.
+head_tuning.py fine-tunes a pretrained scGPT (TransformerModel) for cell-type classification on single-cell / spatial transcriptomics stored as AnnData (.h5ad). It loads weights and vocabulary from a local checkpoint (load_model), aligns genes to the model vocab, runs scGPT’s Preprocessor (normalization and binning as configured), and tokenizes expression for the transformer.
 
 **[2024.02.26]** We have provided a priliminary support for running the pretraining workflow with HuggingFace at the [integrate-huggingface-model](https://github.com/bowang-lab/scGPT/tree/integrate-huggingface-model) branch. We will conduct further testing and merge it to the main branch soon.
 
