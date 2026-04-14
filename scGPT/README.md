@@ -13,6 +13,8 @@ head_tuning.py fine-tunes a pretrained scGPT (TransformerModel) for cell-type cl
 
 Data: For dataset_name == "HumanLymph", it builds train/validation data from selected tissue sections of a metastatic lymph-node dataset, holds out separate sections for testing, concatenates with a batch key, and uses train_test_split on the training pool. Inference runs on the held-out set, reports accuracy / precision / recall / macro-F1, writes predictions on adata, exports CLS-style embeddings for train and test views, and produces a UMAP figure and confusion matrix heatmap.
 
+If need to run head_tuning.py using multi-GPU, users can use command: torchrun --standalone --nproc_per_node=2 head_tuning.py
+
 **[2024.02.26]** We have provided a priliminary support for running the pretraining workflow with HuggingFace at the [integrate-huggingface-model](https://github.com/bowang-lab/scGPT/tree/integrate-huggingface-model) branch. We will conduct further testing and merge it to the main branch soon.
 
 **[2023.11.07]** As requested by many, now we have made flash-attention an optional dependency. The pretrained weights can be loaded on pytorch CPU, GPU, and flash-attn backends using the same [load_pretrained](https://github.com/bowang-lab/scGPT/blob/f6097112fe5175cd4e221890ed2e2b1815f54010/scgpt/utils/util.py#L304) function, `load_pretrained(target_model, torch.load("path_to_ckpt.pt"))`. An example usage is also [here](https://github.com/bowang-lab/scGPT/blob/f6097112fe5175cd4e221890ed2e2b1815f54010/scgpt/tasks/cell_emb.py#L258).
