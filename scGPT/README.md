@@ -9,7 +9,7 @@
 
 head_tuning.py loads a pretrained scGPT (TransformerModel) and perform head tuning for cell-type classification on single-cell / spatial transcriptomics stored as AnnData (.h5ad). It loads weights and vocabulary from a local checkpoint (load_model), aligns genes to the model vocab, runs scGPT’s Preprocessor (normalization and binning as configured), and tokenizes expression for the transformer.
 
-Data: For dataset_name == "HumanLymph", it builds train/validation data from selected tissue sections of a metastatic lymph-node dataset, holds out separate sections for testing, concatenates with a batch key. Inference runs on the held-out set, reports accuracy / precision / recall / macro-F1, writes predictions on adata, exports CLS-style embeddings for train and test views, and produces a UMAP figure and confusion matrix heatmap.
+Data: For dataset_name == "HumanLymph", it builds train/validation data from selected tissue sections of a metastatic lymph-node dataset, holds out separate sections for testing, concatenates with a batch key. Inference runs on the held-out set, reports accuracy / precision / recall / macro-F1, writes predictions on adata, exports CLS-style embeddings for train and test views, and produces a UMAP figure and saves embeddings.
 
 If need to run head_tuning.py using multi-GPU, users can use command: torchrun --standalone --nproc_per_node=2 head_tuning.py
 
@@ -85,9 +85,6 @@ Please see our example code in [examples/finetune_integration.py](examples/finet
 - [x] Reference mapping example
 - [ ] Publish to huggingface model hub
 
-## Contributing
-
-We greatly welcome contributions to scGPT. Please submit a pull request if you have any ideas or bug fixes. We also welcome any issues you encounter while using scGPT.
 
 ## Acknowledgements
 
