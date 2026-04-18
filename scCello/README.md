@@ -21,8 +21,6 @@ scCello enhances transcriptome foundation models (TFMs) by integrating cell onto
 
 This repository is based on PyTorch 2.0 and Python 3.9.
 
-![Main Method](asset/main_method_sccello.png)
-
 Table of contents:
 * [Features](#features)
 * [Updates](#updates)
