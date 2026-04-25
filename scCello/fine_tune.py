@@ -238,7 +238,7 @@ def build_supervised_trainer(args, training_args, model, train_dataset, eval_dat
     collator = DataCollatorForCellClassification(
         model_input_name=["input_ids"],
         pad_to_multiple_of=None,
-        model_max_length=max_len,   # 传给 collator
+        model_max_length=max_len,   
     )
 
     trainer = Trainer(
