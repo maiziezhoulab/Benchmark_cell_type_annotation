@@ -226,7 +226,7 @@ if 'classification' in config['supervised_task']:
     #adata.obsm[f"{prediction_key}_probs"][test_mask] = predictions[1]
     probs = predictions[1]
     if probs.ndim == 3 and probs.shape[-1] == 1:
-        probs = probs.squeeze(-1)        # 或 probs = probs.squeeze(-1)
+        probs = probs.squeeze(-1)        # or probs = probs.squeeze(-1)
     adata.obsm[f"{prediction_key}_probs"][test_mask] = probs
 else:
     # For regression tasks
